@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake Recipe</title>
+    <link rel="stylesheet" href="recipe.css" />
+   
+      <!-- /*Margins are used to create --MARGIN CREATES THE BORDERS KINDA
+            space around elements, outside of any defined borders.*/
+
+      /*The CSS padding properties are used to generate space around an
+        element's content, inside of any defined borders. */ -->
+
+  </head>
+  
+      <style>
+        * {
+          overflow: auto;
+      }
+      
+      body {
+          background-color: #8ba1bb;
+          font-family: Arial;
+      }
+      
+      
+      div.content {
+          background-color: white;
+          margin: 60px 10% 80px 10%;
+          /*margin: Top right bottom left */
+          padding: 0px 30px 30px 30px;
+          box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 20%);
+          overflow: visible;
+      }
+      
+      h1 {
+          text-align: center;
+          margin-top: 5px;
+          margin-bottom 12px
+      }
+      
+      p.description {
+          text-align: center;
+          max-width: 400px;
+          color: black;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          /*centralizes text*/
+      }
+      
+      .center {
+          text-align: center;
+          width: 100%;
+      }
+      
+      div.category {
+          /*color: white;
+        background-color: black; */
+          text-align: center;
+          margin-bottom: 0px;
+          margin-top: 0px;
+          overflow: visible;
+      }
+      
+      
+      p.category {
+          background-color: black;
+          color: white;
+          display: inline-block;
+          margin-top: -15px;
+          margin-bottom: 0px;
+          padding: 8px 20px;
+          font-weight: bold;
+          font-size: 16px;
+      }
+      
+      div.line {
+          height: 1px;
+          background-color: black;
+          width: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          /* auto takes all the available space
+        in the left and right to make it balance*/
+      }
+      
+      
+      div.description {
+          text-align: center;
+          margin-bottom: -18px;
+      }
+      
+      
+      
+      div.info {
+          position: relative;
+      }
+      
+      table.info {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          color: white;
+          background-color: #6C829DC0;
+          height: 80px
+      }
+      
+      /* All the td of the table that has a info class */
+      table.info td {
+          text-align: center;
+          vertical-align: top;
+          font-size: 14px;
+      }
+      
+      table.info th {
+          vertical-align: bottom;
+          padding-bottom: 8px;
+          font-size: 16px
+      }
+      
+      img.info {
+          style: "display:block";
+          max-height: 400px;
+          object-fit: cover;
+          min-height: 200px;
+          background-color: lightgrey;
+      }
+      
+      div.col {
+          width: 45%;
+          margin-top: 20px
+              /* 45 +45 =90 to leave 10% in the middle */
+      }
+      
+      div.col h2 {
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 15px;
+          border-bottom: 5px solid #6C829DC0;
+          padding-bottom: 5px;
+      }
+      
+      div.col1 {
+      
+          display: inline-block;
+          margin: right 10%;
+      }
+      
+      div.col2 {
+          float: right;
+      
+      }
+      
+      
+      /* to select all the `p` in div.ingredients */
+      div.ingredients p {
+          /* background-color: lightblue; */
+          font-family: Arial;
+          font-size: 14px;
+          /* font-weight: bold; */
+          border: 1px solid lightgray;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          text-align: center;
+          margin-top: 4px;
+          margin-bottom: 0;
+          display: block;
+          font-weight: bold;
+      }
+      
+      table.instructions p.number {
+          background-color: #6C829DC0;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          padding-top: 4px;
+          box-sizing: border-box;
+          border-radius: 50%;
+          /* to have a circle */
+      }
+
+      </style>
+
+  <body>
+    <!-- <div class="category">
+      <p class="category">Recipe</p>
+    </div> -->
+
+    <div class="content">
+      <div class="category">
+        <p class="category">Recipe</p>
+      </div>
+
+      <h1>Chocolate cake recipe</h1>
+
+      <div class="line"></div>
+
+      <div class="center description">
+        <p class="description">
+          "This chocolate cake recipe is a classic. This version of the recipe
+          is fast and quick and your kids will love it."
+        </p>
+      </div>
+      <br />
+      <br /><br />
+      <div class="info">
+        <img class="center info" src="https://jonathanroux.com/cake.jpg?id=999" />
+
+        <table class="info">
+          
+          <tr>
+            <th>Difficulty</th> <th>Preparation</th> <th>Cooking</th> <th>Total time</th>
+          </tr>
+          <tr>
+            <td>Easy</td> <td>10 min</td> <td>25 min</td> <td>35 min</td>
+          </tr>
+        </table>
+      </div>
+          
+        <div>
+      <div class="col1 col">
+      <h2>Ingredients</h2>
+            <div class="ingredients">
+        <p class="ingredients">Dark chocolate: 200g</p>
+        <p class="ingredients">Butter: 200g</p>
+        <p class="ingredients">Sugar: 150g</p>
+        <p class="ingredients">Flour: 80g</p>
+        <p class="ingredients">Eggs: 4</p>
+              </div>   
+       </div>
+
+      <div class="col2 col">
+      <h2>Instructions</h2>
+
+      <table class = "instructions">
+        <tr> 
+          <td> <p class = "number">1 </p> </td> <td class="instruction_step"  > Melt the chocolate and the butter together </td>
+          </tr>
+        <tr>
+         <td> <p class = "number"> 2 </p> </td> <td class="instruction_step" > Mix the sugar, eggs and the flour </td> 
+           </tr>
+        <tr>
+        <td> <p class = "number"> 3 </p> </td>  <td class="instruction_step" >Mix everything to get a smooth dough </td> 
+            </tr>
+        <tr>
+         <td> <p class = "number"> 4 </p> </td>  <td class="instruction_step" >Bake in the oven and do follow this procedure to get good bread </td> 
+               </tr>  
+              <!-- <tr> 
+              <td> <p class = "number">1 </p> </td> <td class="instruction_step"  > Melt the chocolate and the butter together </td>
+              </tr>
+            <tr>
+              <td> <p class = "number"> 2 </p> </td> <td class="instruction_step" > Mix the sugar, eggs and the flour </td> 
+                </tr>
+            <tr>
+            <td> <p class = "number"> 3 </p> </td>  <td class="instruction_step" >Mix everything to get a smooth dough </td> 
+                </tr>
+            <tr>
+            <td> <p class = "number"> 4 </p> </td>  <td class="instruction_step" >Bake in the oven </td> 
+                    </tr>       --> 
+    
+      
+        </table>  </div>
+             </div>          <!-- for the overflow:auto- ->
+    </div>
+  </body>
+</html>
