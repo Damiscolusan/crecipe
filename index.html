@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cake Recipe</title>
-    <link rel="stylesheet" href="recipe.css" />
+    <link rel="stylesheet" href="cake_recipe.css" />
    
       <!-- /*Margins are used to create --MARGIN CREATES THE BORDERS KINDA
             space around elements, outside of any defined borders.*/
@@ -13,178 +13,281 @@
         element's content, inside of any defined borders. */ -->
 
   </head>
-  
-      <style>
-        * {
-          overflow: auto;
-      }
-      
-      body {
-          background-color: #8ba1bb;
-          font-family: Arial;
-      }
-      
-      
-      div.content {
-          background-color: white;
-          margin: 60px 10% 80px 10%;
-          /*margin: Top right bottom left */
-          padding: 0px 30px 30px 30px;
-          box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 20%);
-          overflow: visible;
-      }
-      
-      h1 {
-          text-align: center;
-          margin-top: 5px;
-          margin-bottom 12px
-      }
-      
-      p.description {
-          text-align: center;
-          max-width: 400px;
-          color: black;
-          display: inline-block;
-          font-size: 14px;
-          font-weight: bold;
-          /*centralizes text*/
-      }
-      
-      .center {
-          text-align: center;
-          width: 100%;
-      }
-      
-      div.category {
-          /*color: white;
-        background-color: black; */
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 0px;
-          overflow: visible;
-      }
-      
-      
-      p.category {
-          background-color: black;
-          color: white;
-          display: inline-block;
-          margin-top: -15px;
-          margin-bottom: 0px;
-          padding: 8px 20px;
-          font-weight: bold;
-          font-size: 16px;
-      }
-      
-      div.line {
-          height: 1px;
-          background-color: black;
-          width: 100px;
-          margin-left: auto;
-          margin-right: auto;
-          /* auto takes all the available space
-        in the left and right to make it balance*/
-      }
-      
-      
-      div.description {
-          text-align: center;
-          margin-bottom: -18px;
-      }
-      
-      
-      
-      div.info {
-          position: relative;
-      }
-      
-      table.info {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          color: white;
-          background-color: #6C829DC0;
-          height: 80px
-      }
-      
-      /* All the td of the table that has a info class */
-      table.info td {
-          text-align: center;
-          vertical-align: top;
-          font-size: 14px;
-      }
-      
-      table.info th {
-          vertical-align: bottom;
-          padding-bottom: 8px;
-          font-size: 16px
-      }
-      
-      img.info {
-          style: "display:block";
-          max-height: 400px;
-          object-fit: cover;
-          min-height: 200px;
-          background-color: lightgrey;
-      }
-      
-      div.col {
-          width: 45%;
-          margin-top: 20px
-              /* 45 +45 =90 to leave 10% in the middle */
-      }
-      
-      div.col h2 {
-          text-align: center;
-          text-transform: uppercase;
-          font-size: 15px;
-          border-bottom: 5px solid #6C829DC0;
-          padding-bottom: 5px;
-      }
-      
-      div.col1 {
-      
-          display: inline-block;
-          margin: right 10%;
-      }
-      
-      div.col2 {
-          float: right;
-      
-      }
-      
-      
-      /* to select all the `p` in div.ingredients */
-      div.ingredients p {
-          /* background-color: lightblue; */
-          font-family: Arial;
-          font-size: 14px;
-          /* font-weight: bold; */
-          border: 1px solid lightgray;
-          padding-top: 8px;
-          padding-bottom: 8px;
-          text-align: center;
-          margin-top: 4px;
-          margin-bottom: 0;
-          display: block;
-          font-weight: bold;
-      }
-      
-      table.instructions p.number {
-          background-color: #6C829DC0;
-          color: white;
-          font-size: 14px;
-          font-weight: bold;
-          width: 25px;
-          height: 25px;
-          text-align: center;
-          padding-top: 4px;
-          box-sizing: border-box;
-          border-radius: 50%;
-          /* to have a circle */
-      }
+  <style>
+    * {
+        overflow: auto;
+    }
+    
+    body {
+        background-color: #8ba1bb;
+        font-family: Arial;
+    }
+    
+    /* For mobile- which is to be written first somehow sha, design for laptop then edit for mobile. */
+    div.content {
+        background-color: white;
+        margin: 40px 8px 20px 8px;
+        /*margin: Top right bottom left */
+        padding: 0px 8px 30px 8px;
+        box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 20%);
+        overflow: visible;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom 12px
+    }
+    
+    p.description {
+        text-align: center;
+        max-width: 400px;
+        /*amount of space for words on a line */
+        color: black;
+        display: inline-block;
+        -
+        /* allows control of the line and accepts you to do padding and add features */
+        font-size: 14px;
+        font-weight: bold;
+        /*centralizes text*/
+    }
+    
+    .center {
+        text-align: center;
+        width: 100%;
+    }
+    
+    div.category {
+        /*color: white;
+      background-color: black; */
+        text-align: center;
+        margin-bottom: -18px;
+        /* 0px; */
+        margin-top: 0px;
+        overflow: visible;
+    }
+    
+    
+    p.category {
+        background-color: black;
+        color: white;
+        display: inline-block;
+        margin-top: -15px;
+        margin-bottom: 0px;
+        padding: 8px 20px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    
+    div.line {
+        height: 1px;
+        background-color: black;
+        width: 100px;
+        /*amount of space for words on a line */
+        margin-left: auto;
+        /* take all the space you can take on the left*/
+        margin-right: auto;
+        /* take all the space you can take on theright*/
+        /* auto takes all the available space
+      in the left and right to make it balance*/
+    }
+    
+    
+    div.description {
+        text-align: center;
+        margin-bottom: -18px;
+    }
+    
+    
+    
+    div.info {
+        position: relative;
+    }
+    
+    table.info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: #6C829DC0;
+        height: 50px
+    }
+    
+    /* All the td of the table that has a info class */
+    table.info td {
+        text-align: center;
+        vertical-align: top;
+        font-size: 12px;
+    }
+    
+    table.info th {
+        vertical-align: bottom;
+        padding-bottom: 8px;
+        font-size: 14px
+    }
+    
+    img.info {
+        display: block;
+        max-height: 400px;
+        object-fit: cover;
+        min-height: 200px;
+        background-color: lightgrey;
+    }
+    
+    div.col {
+        width: 100%;
+        margin-top: 20px
+            /* 45 +45 =90 to leave 10% in the middle */
+    }
+    
+    div.col h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 15px;
+        border-bottom: 5px solid #6C829DC0;
+        padding-bottom: 5px;
+    }
+    
+    div.col1 {
+        display: inline-block;
+    
+    }
+    
+    div.col2 {
+        /* float: right; */
+    
+    }
+    
+    /* to select all the `p` in div.ingredients */
+    div.ingredients p {
+        /* background-color: lightblue; */
+        font-family: Arial;
+        font-size: 14px;
+        /* font-weight: bold; */
+        border: 1px solid lightgray;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        display: block;
+        font-weight: bold;
+    }
+    
+    table.instructions p.number {
+        background-color: #6C829DC0;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        padding-top: 4px;
+        box-sizing: border-box;
+        /* to properly align the text in the boxxz  */
+        border-radius: 50%;
+        margin-top: 0px;
+        /* to have a circle */
+    }
+    
+    table.instructions td.instruction_step {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+    
+    }
+    
+    table.instructions td {
+        vertical-align: top;
+    }
+    
+    table.instructions tr {
+        height: 40px;
+    }
+    
+    /* For DESKTOP styles */
+    
+    @media only screen and (min-width: 768px) {
+    
+        div.content {
+            margin: 60px 10% 80px 10%;
+            padding: 0px 30px 30px 30px;
+            min-width: 350px;
+    
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        table.info {
+            height: 80px
+        }
+    
+    }
+    
+    @media only screen and (min-width: 768px) {
+        table.info th {
+            font-size: 16px
+        }
+    }
+    
+    @media only screen and (min-width:768px) {
+    
+        table.info th {
+            font-size: 16px;
+        }
+    }
+    
+    
+    @media only screen and (min-width:768px) {
+    
+        table.info td {
+            font-size: 14px;
+        }
+    }
+    
+    @media only screen and (min-width:768px) {
+        div.col {
+            width: 45%;
+            margin-top: 20px;
+        }
+    }
+    
+    /* @media only screen and (min-width:768px) {
+                    div.col h2 {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 15px;
+                border-bottom: 5px solid #6C829DC0;
+                padding-bottom: 5px;
+                }
+            } */
+    
+    
+    
+    @media only screen and (min-width:768px) {
+        div.col1 {
+            display: inline-block;
+            margin: right 10%;
+        }
+    }
+    
+    @media only screen and (min-width:768px) {
+        div.col2 {
+            float: right;
+        }
+    }
+    
+    /* FOR VERY VERY LARGE SCREEN  */
+    @media only screen and (min-width:900px) {
+        div.content {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 650px;
+        }
+    }
 
-      </style>
+  </style>
+      
 
   <body>
     <!-- <div class="category">
@@ -209,20 +312,20 @@
       <br />
       <br /><br />
       <div class="info">
-        <img class="center info" src="https://jonathanroux.com/cake.jpg?id=999" />
+          <img class="center info" src="https://jonathanroux.com/cake.jpg?id=999" />
 
-        <table class="info">
-          
-          <tr>
-            <th>Difficulty</th> <th>Preparation</th> <th>Cooking</th> <th>Total time</th>
-          </tr>
-          <tr>
-            <td>Easy</td> <td>10 min</td> <td>25 min</td> <td>35 min</td>
-          </tr>
-        </table>
+          <table class="info">
+            
+            <tr>
+              <th>Difficulty</th> <th>Preparation</th> <th>Cooking</th> <th>Total time</th>
+            </tr>
+            <tr>
+              <td>Easy</td> <td>10 min</td> <td>25 min</td> <td>35 min</td>
+            </tr>
+          </table>
       </div>
           
-        <div>
+         <div>  <!-- grouped div for overflow auto mode -->
       <div class="col1 col">
       <h2>Ingredients</h2>
             <div class="ingredients">
@@ -248,7 +351,7 @@
         <td> <p class = "number"> 3 </p> </td>  <td class="instruction_step" >Mix everything to get a smooth dough </td> 
             </tr>
         <tr>
-         <td> <p class = "number"> 4 </p> </td>  <td class="instruction_step" >Bake in the oven and do follow this procedure to get your Fresh and Delicious Chocolate Cake </td> 
+         <td> <p class = "number"> 4 </p> </td>  <td class="instruction_step" >Bake in the oven and do follow this procedure to get good bread </td> 
                </tr>  
               <!-- <tr> 
               <td> <p class = "number">1 </p> </td> <td class="instruction_step"  > Melt the chocolate and the butter together </td>
